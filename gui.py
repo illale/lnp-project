@@ -4,6 +4,8 @@ from tkinter import ttk, filedialog
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib.pyplot as plt
+import json
+from pathlib import Path
 
 # For jupyter notebook
 import requests as rq
@@ -65,14 +67,9 @@ frame.pack(padx=10, pady=10, fill="both", expand=True)
 
 options = ["Dataset statistics", "Custom sentence similarity"]
 
-data = {
-    "Word similarity\nMC Dataset @ N100": {"statistic": 0.6197982041050111, "pvalue": 0.0003360473903788395},
-    "Word similarity\nMC Dataset": {"statistic": 0.724072525404594, "pvalue": 8.994311402784625e-06},
-    "Word similarity\nRG Dataset": {"statistic": 0.7850157130429563, "pvalue": 1.6236618035026146e-14},
-    "Word similarity\nWordSim Dataset": {"statistic": 0.49022656405756004, "pvalue": 1.1105676505687779e-22},
-    "Sent. similarity\nSTSS-131 v. Datamuse": {"statistic": 0.6207214473990158, "pvalue": 3.342555588241077e-15},
-    "Sent. similarity\nSTSS-131 v. TF-IDF": {"statistic": 0.776216151106484, "pvalue": 2.0516274140670272e-27}
-}
+# Read the data from the jupyter notebook
+with open(Path("data") / "results.json", "r") as f:
+    data = json.load(f)
 
 def show_plot():
     clear_frame()
