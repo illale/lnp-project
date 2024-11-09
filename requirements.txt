@@ -1,7 +1,7 @@
+matplotlib
+nltk
 numpy
 pandas
-matplotlib
-requests
+Requests
+scikit_learn
 scipy
-nltk
-notebook
