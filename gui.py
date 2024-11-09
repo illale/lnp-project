@@ -171,8 +171,8 @@ show_plot()
 # Add a dropdown menu
 options = ["Dataset statistics", "Custom sentence similarity"]
 dropdown_var = tk.StringVar(value=options[0])
-dropdown = ttk.Combobox(root, textvariable=dropdown_var, values=options)
-dropdown.set("Select an option")
+dropdown = ttk.Combobox(root, textvariable=dropdown_var, values=options, state="readonly")
+dropdown.set(options[0])
 dropdown.bind("<<ComboboxSelected>>", on_select)
 dropdown.pack(pady=10)
 
