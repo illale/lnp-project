@@ -3,6 +3,11 @@
 
 This project will demonstrate various methodologies for computing sentence-to-sentence similarity scores.
 
+## Files
+
+`project.ipynb` - Tasks 1-7  
+`gui.py` - Task 8
+
 ## 1. Annotated Word Pair Datasets
 Consider the datasets of word pairs whose similarity is manually annotated, especially **MC-28**, **WordSim**, and **RG**, available at [https://github.com/alexanderpanchenko/sim-eval](https://github.com/alexanderpanchenko/sim-eval). Similarly to the work on this repository, we would like to test the usefulness of any new similarity measure by computing its correlation with human judgment (using **Pearson coefficient**). Review how Pearson Coefficient works and identify python script to achieve this. Study **Datamuse API**, which outputs a set of words that are available to a query word. This API is available at [http://www.datamuse.com/api/](http://www.datamuse.com/api/).
 
